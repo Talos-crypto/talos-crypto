@@ -2,7 +2,7 @@
 layout: home
 permalink: /
 image:
-  feature: talos-image.png
+  feature: palceholder-1600x800.png
 ---
 
 <div class="tiles">
