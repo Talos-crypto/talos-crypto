@@ -43,12 +43,16 @@ While they collect data that is not inherently sensitive at first glance there a
 
 <p>With the rise of the Internet of Things (IoT) the number of sensors and devices that monitor us and our surroundings is increasing rapidly. Due to the size and power constraints inherent in IoT applications many systems rely on a cloud backend to provide aggregation, analysis and insights. Especially in the case of consumer-oriented applications this usually requires the user to hand control over their data to the company offering the cloud services.</p>
 
+
+<a id="regaining-control-over-data" class="anchor" href="#regaining-control-over-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Regaining Control over the Data</h3>
+<p><img src="/images/talos-image.png" alt="Overview"></p>
+
 <h3>
 <a id="encrypted-data-processing" class="anchor" href="#encrypted-data-processing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Encrypted Data Processing</h3>
-
 <p>In order to enable users to regain control over their data and therefore privacy, Shafagh et al. developed Talos, a cryptographic tool-set to enable encrypted query processing for mobile devices and embedded Internet of Things (IoT) devices. It is based on the idea of combining Partial Homomorphic Encryption and Property Preserving Encryption, first introduced in <a href="https://css.csail.mit.edu/cryptdb/">CryptDB</a>. A remote (e.g. cloud-hosted) Database is used to store encrypted values. Thanks to the properties of the mentioned encryption schemes we can still execute many SQL queries over the data while giving up only small amounts of information about the plaintext data.</p>
 <p><img src="/images/our_approach.png" alt="Overview of the system"></p>
 <p><img src="/images/enc_data_processing.png" alt="Encrypted Data Processing Diagram"></p>
+
 
 <h3>
 <a id="the-smartphone-as-a-gateway" class="anchor" href="#the-smartphone-as-a-gateway" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Smartphone as a Gateway</h3>
