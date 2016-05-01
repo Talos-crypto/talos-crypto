@@ -1,7 +1,7 @@
 ---
 layout: default
 img: 400x250.gif
-title: The Cloud and Data
+title: A Cloud-Enabled World
 description: |
 ---
 
