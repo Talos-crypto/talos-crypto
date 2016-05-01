@@ -1,6 +1,6 @@
 ---
 layout: default
-img: phones.png
+img: gateway.png
 title: The Smartphone as a Gateway
 description: |
 ---

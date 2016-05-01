@@ -1,0 +1,12 @@
+---
+layout: default
+img: 400x250.gif
+title: The Cloud and Data
+description: |
+---
+
+Cloud-backed applications allow users to access their data from multiple devices and allow applications to
+work with large amounts of data that could not otherwise be computed over due to
+performance and storage limitations on mobile devices.
+
+

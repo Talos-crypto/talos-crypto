@@ -1,0 +1,9 @@
+---
+layout: default
+img:  400x250.gif
+title: Data Concerns
+description: |
+---
+With the rise of the Internet of Things (IoT) the number of sensors and devices that monitor us and our surroundings is increasing rapidly. 
+A common example of such applications are Health and Fitness Tracking Applications.
+While they collect data that is not inherently sensitive at first glance there are in fact sophisticated machine learning and correlation tools that allow inferring highly sensitive information from activity tracking data.
