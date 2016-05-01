@@ -1,7 +1,7 @@
 <section id="services">
 <!-- Page Content -->
 {% for post in site.posts reversed %}
-    {%if post.categories contains 'Main' unless post.categories contains 'About'}
+    {% if post.categories contains 'Main' unless post.categories contains 'About' %}
     {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
         {% if thecycle == 'odd' %}
         <div class="content-section-a">
