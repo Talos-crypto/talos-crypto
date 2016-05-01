@@ -1,7 +1,6 @@
 ---
 layout: default
 img: ipad.png
-category: Services
 title: Background
 description: |
 ---

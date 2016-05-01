@@ -1,7 +1,6 @@
 ---
 layout: default
 img: openmote.png
-category: Services
 title: Embedded Devices
 description: |
 ---

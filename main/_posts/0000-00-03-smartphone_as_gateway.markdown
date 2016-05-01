@@ -1,7 +1,6 @@
 ---
 layout: default
 img: phones.png
-category: Services
 title: The Smartphone as a Gateway
 description: |
 ---

@@ -1,7 +1,6 @@
 ---
 layout: default
 img: enc_data_processing.png
-category: Services
 title: Encrypted Data Processing
 description: |
 ---
