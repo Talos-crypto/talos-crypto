@@ -1,6 +1,6 @@
 ---
 layout: default
-category: About
+category: about
 title: Talos About Title
 description: 
 ---
