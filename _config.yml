@@ -5,7 +5,7 @@
 url: https://talos-crypto.github.io/
 title: Talos
 email: your-email@domain.com
-author: Your Name
+author: Talos Team
 description: > # "Write an awesome description for your new site here. 
   You can edit this line in _config.yml. It will appear in your document 
   head meta (for Google search results) and in your feed.xml site 
@@ -19,7 +19,7 @@ credits: 'Credits: Landing Page is a free to use, open source Bootstrap theme cr
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /:title/
 
 # ----------------------- #
 #   3rd Party Settings    #
