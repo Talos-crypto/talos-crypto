@@ -2,7 +2,8 @@
 layout: default
 img: phones.png
 category: Services
-title: Google Web Fonts and<br>Font Awesome Icons
+title: The Smartphone as a Gateway
 description: |
 ---
-This template features the 'Lato' font, part of the [Google Web Font library](http://www.google.com/fonts), as well as [icons from Font Awesome](http://fontawesome.io).
+
+Many consumer-oriented IoT devices (e.g. fitness trackers) currently use smartphones as a gateway to both the user and to the cloud. Smartphone applications can be used to interact with and configure devices while the smartphones network connectivity can be used to establish a connection to the cloud. [Talos for Android](https://github.com/Talos-crypto/Talos-Android) is a ready-to-use framework that allows application developers to easily add encrypted data processing to their applications. Documentation and sample applications can be found in the [project repo](https://github.com/Talos-crypto/Talos-Android).x
