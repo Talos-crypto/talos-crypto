@@ -1,8 +1,8 @@
 ---
 layout: default
 img:  400x250.gif
-title: Privacy Concerns
+title: Sensitive Data
 description: |
 ---
-With the rise of the Internet of Things (IoT) the number of sensors and devices that monitor us and our surroundings is increasing rapidly. 
-While they collect data that is not inherently sensitive at first glance there are in fact sophisticated machine learning and correlation tools that allow inferring highly sensitive information from activity tracking data.
+
+The Data collected by applications such as Health and Fitness tracking applications might not look sensitive, however statistical inference can be used to discover highly private information.

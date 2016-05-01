@@ -5,8 +5,7 @@ title: A Cloud-Enabled World
 description: |
 ---
 
-Cloud-backed applications allow users to access their data from multiple devices and allow applications to
-work with large amounts of data that could not otherwise be computed over due to
-performance and storage limitations on mobile devices.
+With the rise of cloud-backed applications, we increasingly trade control over our data in order to get access to new features and applications. 
+This puts our data at the mercy of corporations, surveillance agencies and hackers.
 
 
