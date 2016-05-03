@@ -1,13 +1,8 @@
         <!-- Navigation -->
         <nav class="navbar" role="navigation">
-        {% assign sorted_pages = site.pages | sort:"nav_weight" %}
-        {% for node in sorted_pages %}
-            {% assign url_parts = node.url | split: '/' %}
-            {% assign depth = url_parts | size %}
-            {% if depth <= 2 %}
-                <a class="navbar-link" href='{{node.url}}'>{{node.title}}</a>
-            {% endif %}
-        {% endfor %}
+        {% assign sorted_pages = site.pages | sort:"nav_weight" %}{% for node in sorted_pages %}{% assign url_parts = node.url | split: '/' %}{% assign depth = url_parts | size %}{% if depth <= 2 %}
+            <a class="navbar-link" href='{{node.url}}'>{{node.title}}</a>
+        {% endif %}{% endfor %}
         </nav>
 
         <!-- Header -->
