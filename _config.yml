@@ -44,7 +44,7 @@ defaults:
 collections:
   team-members:
       output: true
-      permalink: /members/:title
+      permalink: /team/:title
 
 # ----------------------- #
 #    Jekyll & Plugins     #
