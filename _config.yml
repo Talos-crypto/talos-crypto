@@ -39,11 +39,13 @@ defaults:
         path: ""
         type: "team"
     values:
-        permalink: /team/:title
+        layout: "default"
 
 
 collections:
-    - team
+  team:
+      output: true
+      permalink: /team/:title
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -54,8 +56,4 @@ gems:
   - jekyll-sitemap
 
 # Build settings
-markdown: redcarpet
-
-# These settings will match the markdown language to be pretty much exactly the same as "Github Flavoured Markdown" 
-redcarpet:
-  extensions: ["smart","tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks", "lax_spacing" ]
+markdown: kramdown
