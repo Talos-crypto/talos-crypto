@@ -23,7 +23,8 @@ credits: 'Credits: Design inspired by Landing Page by <a href="http://startboots
 #-------------------------#
 #       Site Setup        #
 #-------------------------#
-url: https://http://alexanderviand.github.io/talos-crypto.github.io/
+url: https://http://alexanderviand.github.io
+baseurl: /talos-crypto.github.io
 
 defaults:
   -
@@ -41,9 +42,9 @@ defaults:
 
 
 collections:
-  team:
+  team-members:
       output: true
-      permalink: /team/:title
+      permalink: /members/:title
 
 # ----------------------- #
 #    Jekyll & Plugins     #
