@@ -1,10 +1,11 @@
 ---
+# used by navigation
+title: About us
 permalink: /team
 nav_weight: 1
 
-layout: team
 #used by the layout:
-title: About us
+layout: team
 ---
 
 TEAM.MD CONTENT
