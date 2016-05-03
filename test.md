@@ -1,6 +1,6 @@
 ---
-permalink: /team
-nav_weight: 1
+permalink: /test
+nav_weight: 0.7
 
 layout: team
 #used by the layout:

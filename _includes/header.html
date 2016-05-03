@@ -1,19 +1,41 @@
-<!-- Navigation -->
-<nav class="navbar" role="navigation">
-    <a class="navbar-link" href="{{ site.baseurl }}">{{ site.title }}</a>
-    <a class="navbar-link" href="{{ site.baseurl }}">{{ site.title }}</a>
-</nav>
+        {% assign current_url_parts = page.url | split: '/' %}
+        {% assign current_depth = current_url_parts | size %}
+        {% assign rm = current_url_parts | last %}
+        {% if false %}
+        {% assign rm2 = rm | append: '/' %}
+        {% assign base_url = page.url | remove: rm2 %}
+        {% assign base_url = base_url | remove: rm %}        
+        {% else %}
+        {% assign base_url = page.url %}
+        {% endif %}
+        current page: {{ page.url }}
+        current depth: {{ current_depth }}
+        current base url: {{ base_url }}
+        <!-- Navigation -->
+        <nav class="navbar" role="navigation">
+        {% assign sorted_pages = site.pages | sort:"nav_weight" %}
+        {% for node in sorted_pages %}
+            {% if node.url contains base_url %}
+                {% assign node_url_parts = node.url | split: '/' %}
+                {% assign node_url_depth = node_url_parts | size %}
+                {% assign filename = node_url_parts | last %}
+                {% if current_depth < node_url_depth and filename != 'index.html' %}
+                    <li><a href='{{node.url}}'>{{node.url}} {{node.nav_weight}}</a></li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        </nav>
 
-<!-- Header -->
-<div class="header">
-    <div class="header-message">
-        <h1>{{ site.title }}</h1>
-        <h3>{{ site.subTitle }}</h3>
-    </div>
-    <hr class="header-divider">
-    <div class="header-buttons">        
-        <ul class="list-inline intro-social-buttons">
-           <!-- for each in SOMETHING -->
-        </ul>
-    </div>
-</div>
+        <!-- Header -->
+        <div class="header">
+            <div class="header-message">
+                <h1>{{ site.title }}</h1>
+                <h3>{{ site.subTitle }}</h3>
+            </div>
+            <hr class="header-divider">
+            <div class="header-buttons">        
+                <ul class="list-inline intro-social-buttons">
+                   <!-- for each in SOMETHING -->
+                </ul>
+            </div>
+        </div>

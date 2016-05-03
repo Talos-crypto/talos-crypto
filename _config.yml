@@ -17,7 +17,7 @@ author: Talos Team
 
 # FOOTER:
 copyright: 'Copyright &copy; 2016, <a href="http://www.vs.inf.ethz.ch/">Distributed Systems Group</a>, <a href="https://www.ethz.ch/">ETH Zurich</a>'
-credits: 'Credits: Landing Page theme created by <a href="http://startbootstrap.com/">Start Bootstrap</a>.'
+credits: 'Credits: Design inspired by Landing Page by <a href="http://startbootstrap.com/">Start Bootstrap</a>.'
 
 
 #-------------------------#
@@ -33,6 +33,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+      nav_weight: 0.5
   - 
     scope:
         path: ""
