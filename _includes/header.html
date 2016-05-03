@@ -1,27 +1,11 @@
-        {% assign current_url_parts = page.url | split: '/' %}
-        {% assign current_depth = current_url_parts | size %}
-        {% assign rm = current_url_parts | last %}
-        {% if false %}
-        {% assign rm2 = rm | append: '/' %}
-        {% assign base_url = page.url | remove: rm2 %}
-        {% assign base_url = base_url | remove: rm %}        
-        {% else %}
-        {% assign base_url = page.url %}
-        {% endif %}
-        current page: {{ page.url }}
-        current depth: {{ current_depth }}
-        current base url: {{ base_url }}
         <!-- Navigation -->
         <nav class="navbar" role="navigation">
         {% assign sorted_pages = site.pages | sort:"nav_weight" %}
         {% for node in sorted_pages %}
-            {% if node.url contains base_url %}
-                {% assign node_url_parts = node.url | split: '/' %}
-                {% assign node_url_depth = node_url_parts | size %}
-                {% assign filename = node_url_parts | last %}
-                {% if current_depth < node_url_depth and filename != 'index.html' %}
-                    <li><a href='{{node.url}}'>{{node.url}} {{node.nav_weight}}</a></li>
-                {% endif %}
+            {% assign url_parts = node.url | split: '/' %}
+            {% assign depth = url_parts | size %}
+            {% if depth <= 2 %}
+                <li><a href='{{node.url}}'>{{node.url}} {{node.nav_weight}}</a></li>
             {% endif %}
         {% endfor %}
         </nav>
