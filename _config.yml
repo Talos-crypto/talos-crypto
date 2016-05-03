@@ -1,27 +1,60 @@
 # ----------------------- #
-#      Main Configs       #
+#       Text Setup        #
 # ----------------------- #
 
-url: https://talos-crypto.github.io/
-title: Talos
-email: your-email@domain.com
-author: Talos Team
-description: Talos gives users back control over their data while still allowing applications to harness the power of the cloud.
+### All text must be HTML (i.e. no markdown) ### 
 
+# HEADER:
+title: Talos
+subTitle: Encrypted Query Processing for the Internet of Things.
+
+
+# META INFO
+description: Talos gives users back control over their data while still allowing applications to harness the power of the cloud.
+email: contact@talos.zendesk.com
+author: Talos Team
+
+
+# FOOTER:
 copyright: 'Copyright &copy; 2016, <a href="http://www.vs.inf.ethz.ch/">Distributed Systems Group</a>, <a href="https://www.ethz.ch/">ETH Zurich</a>'
 credits: 'Credits: Landing Page theme created by <a href="http://startbootstrap.com/">Start Bootstrap</a>.'
+
+
+#-------------------------#
+#       Site Setup        #
+#-------------------------#
+url: https://talos-crypto.github.io/
+
+permalink: /:title/
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  - 
+    scope:
+        path: ""
+        type: "team"
+    values:
+        permalink: /team/:title
+
+
+collections:
+    - team
 
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
-safe: true #mimicks Github settings
+
+safe: true #mimick Github settings
 gems:
   - jekyll-sitemap
 
 # Build settings
 markdown: redcarpet
-permalink: /:title/
 
 # These settings will match the markdown language to be pretty much exactly the same as "Github Flavoured Markdown" 
 redcarpet:
-  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks", "lax_spacing" ]
+  extensions: ["smart","tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks", "lax_spacing" ]

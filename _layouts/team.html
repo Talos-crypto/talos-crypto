@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<H1> TEAM </H1>
+{{ content }}
+
+{% for member in site.team %}
+<div class="team-member">
+	<h3>{{ member.title }}</h3>
+	{{ member.content }}
+<div class="team-member">
+{% endfor %}
