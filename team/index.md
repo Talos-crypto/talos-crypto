@@ -8,4 +8,4 @@ nav_weight: 1
 layout: team
 ---
 
-TEAM.MD CONTENT
+TEAM INDEX.MD CONTENT
