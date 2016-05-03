@@ -6,25 +6,22 @@ url: https://talos-crypto.github.io/
 title: Talos
 email: your-email@domain.com
 author: Talos Team
-description: > # "Write an awesome description for your new site here. 
-  You can edit this line in _config.yml. It will appear in your document 
-  head meta (for Google search results) and in your feed.xml site 
-  description.
+description: Talos gives users back control over their data while still allowing applications to harness the power of the cloud.
+
 copyright: 'Copyright &copy; 2016, <a href="http://www.vs.inf.ethz.ch/">Distributed Systems Group</a>, <a href="https://www.ethz.ch/">ETH Zurich</a>'
 credits: 'Credits: Landing Page theme created by <a href="http://startbootstrap.com/">Start Bootstrap</a>.'
 
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
+safe: true #mimicks Github settings
+gems:
+  - jekyll-sitemap
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: /:title/
 
-# ----------------------- #
-#   3rd Party Settings    #
-# ----------------------- #
-
-social:
-  - title: github
-    url: https://github.com/Talos-crypto
+# These settings will match the markdown language to be pretty much exactly the same as "Github Flavoured Markdown" 
+redcarpet:
+  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks", "lax_spacing" ]
