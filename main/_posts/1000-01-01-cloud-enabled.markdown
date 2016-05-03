@@ -1,6 +1,6 @@
 ---
 layout: default
-img: 400x250.gif
+img: hand-with-cloud.png
 title: A Cloud-Enabled World
 description: |
 ---
