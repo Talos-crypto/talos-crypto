@@ -1,7 +1,7 @@
         <!-- Header -->
-        <div class="header">
+        <header>
             <!-- Navigation -->
-            <nav class="navbar" role="navigation">
+            <nav class="navbar">
             {% assign sorted_pages = site.pages | sort:"nav_weight" %}
             {% for node in sorted_pages %}
                 {% assign url_parts = node.url | split: '/' %}
@@ -27,4 +27,4 @@
                    <!-- for each in SOMETHING -->
                 </ul>
             </div>
-        </div>
+        </header>
