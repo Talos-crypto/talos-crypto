@@ -1,13 +1,23 @@
-        <!-- Navigation -->
-        <nav class="navbar" role="navigation">
-        {% assign sorted_pages = site.pages | sort:"nav_weight" %}{% for node in sorted_pages %}{% assign url_parts = node.url | split: '/' %}{% assign depth = url_parts | size %}{% if depth <= 2 %}
-            <a class="navbar-link" href='{{site.baseurl}}{{node.url}}'>{{node.title}}</a>
-        {% endif %}{% endfor %}
-        </nav>
-
         <!-- Header -->
         <div class="header">
-            <div class="header-message">
+            <!-- Navigation -->
+            <nav class="navbar" role="navigation">
+            {% assign sorted_pages = site.pages | sort:"nav_weight" %}
+            {% for node in sorted_pages %}
+                {% assign url_parts = node.url | split: '/' %}
+                {% assign depth = url_parts | size %}
+                {% if depth <= 2 %}
+                    {% if node.url == page.url %}
+                        <a class="navbar-link current-link" href='{{site.baseurl}}{{node.url}}' title="{{node.title}}">{{node.title}}</a>
+                    {% else %}
+                        <a class="navbar-link" href='{{site.baseurl}}{{node.url}}' title="{{node.title}}">{{node.title}}</a>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            </nav>
+
+            <!-- Top Banner -->
+            <div class="banner">
                 <h1>{{ site.title }}</h1>
                 <h3>{{ site.subTitle }}</h3>
             </div>
