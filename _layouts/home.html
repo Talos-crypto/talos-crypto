@@ -8,5 +8,8 @@ layout: default
 <div class="home-item">
 	<h3>{{ item.title }}</h3>
 	{{ item.content }}
+	{% if item.image %}
+	<img src="{{ site.baseurl }}{{ item.image }}">
+	{% endif %}
 </div>
 {% endfor %}
