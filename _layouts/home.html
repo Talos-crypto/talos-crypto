@@ -3,3 +3,10 @@ layout: default
 ---
 <H1> HOME </h1>
 {{ content }}
+
+{% for item in site.home-items %}
+<div class="home-item-{% cycle 'odd','even' %}">
+	<h3>{{ item.title }}</a></h3>
+	{{ item.content }}
+</div>
+{% endfor %}

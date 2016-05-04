@@ -45,6 +45,7 @@ collections:
   team-members:
       output: true
       permalink: /team/:title
+  home-items:
 
 # ----------------------- #
 #    Jekyll & Plugins     #
