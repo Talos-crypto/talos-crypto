@@ -9,7 +9,7 @@
 $banner-image: url({{ site.baseurl}}/assets/images/intro-bg.jpg);
 $footer-bg-color: #f8f8f8;
 
-$max-width: 50em;
+$max-width: 75em;
 
 
 
@@ -36,7 +36,7 @@ main {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
