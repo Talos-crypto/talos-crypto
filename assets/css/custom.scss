@@ -9,11 +9,13 @@
 $banner-image: url({{ site.baseurl}}/assets/images/intro-bg.jpg);
 $footer-bg-color: #f8f8f8;
 
+$max-width: 50em;
+
 
 
 
 // -------------------------------------- //
-//  Side-wide (defaults, header, footer)  //
+//  Side-wide (defaults and header/footer)  //
 // -------------------------------------- //
 
 body,
@@ -23,6 +25,12 @@ html {
     box-sizing: border-box;
 }
 
+main {
+    margin: 0 auto;
+    max-width: $max-width;
+}
+
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -31,14 +39,19 @@ img {
     width: 100%;
     height: auto;
 }
+
 header {
 
     .navbar {
+        margin: 0 auto;
+        max-width: $max-width;
         padding: 1em 0.5em;
     }
 
     .banner {
         padding: 6em 0;
+        max-width: 100%;
+        margin: 0 0;
         text-align: center;
         background: $banner-image no-repeat center center;
         background-size: cover;
@@ -48,6 +61,8 @@ header {
 
 
 footer {
+    max-width: $max-width;
+    margin: 0 auto;
     padding: 5em 0;
     background-color: $footer-bg-color;
 }
