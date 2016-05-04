@@ -15,7 +15,7 @@ $max-width: 75em;
 
 
 // -------------------------------------- //
-//  Side-wide (defaults and header/footer)  //
+//               defaults                 //
 // -------------------------------------- //
 
 body,
@@ -29,11 +29,23 @@ html {
   box-sizing: inherit;
 }
 
+body {
+    /* ems now 10px by default, but still relative */
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
 
 img {
     max-width: 100%;
     height: auto;
 }
+
+// -------------------------------------- //
+//          Header/Main/Footer            //
+// -------------------------------------- //
 
 header {
 
@@ -72,7 +84,6 @@ footer {
 
 
 
-
 // -------------------------------------- //
 //                 Home                   //
 // -------------------------------------- //
@@ -83,4 +94,23 @@ footer {
 
 .home-item:nth-of-type(2n) {
     background-color: #eee
+}
+
+
+// -------------------------------------- //
+//                Print                   //
+// -------------------------------------- //
+@media print {
+    nav, .banner-buttons {
+        display:none;
+    }
+
+    .banner {
+        padding: 0;
+        background: none;
+    }
+
+    footer {
+        padding: 0 0;
+    }
 }
