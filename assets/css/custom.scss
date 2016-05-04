@@ -25,15 +25,10 @@ html {
     box-sizing: border-box;
 }
 
-main {
-    margin: 0 auto;
-    max-width: $max-width;
-}
-
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 
 img {
     max-width: 100%;
@@ -57,6 +52,11 @@ header {
         background-size: cover;
     }
 
+}
+
+main {
+    margin: 0 auto;
+    max-width: $max-width;
 }
 
 
