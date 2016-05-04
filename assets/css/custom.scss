@@ -24,7 +24,7 @@ header {
     .banner {
         padding: 6em 0;
         text-align: center;
-        background: url(/assets/images/intro-bg.jpg) no-repeat center center;
+        background: url({{ site.baseurl}}/assets/images/intro-bg.jpg) no-repeat center center;
         background-size: cover;
     }
 
