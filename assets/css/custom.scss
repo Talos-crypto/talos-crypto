@@ -129,16 +129,25 @@ header {
 
     .navbar {
         max-width: $max-width;
+        margin: 0 auto;
 
         ul {
             margin: 0 auto;
             padding: 0 0;
+            text-align: center;
+        }
+        @media (min-width: $media-cutoff) {
+            ul {
+                text-align: right;
+            }
+            li:first-child{
+                float:left
+            }
         }
 
         li {
             display: inline-block;
             list-style-type: none;
-            width: 100%;
         }
 
 
