@@ -33,6 +33,7 @@ $banner-text-shadow-color: rgba(0,0,0,0.6);
 $footer-bg-color: $Alabaster;
 $footer-text-color: $Boulder;
 
+
 $max-width: 115rem;
 
 // For some reason it seems like media queries don't respect the 10px rem
@@ -181,7 +182,8 @@ header {
         min-height: 40rem;
         margin: 0 0;
         text-align: center;
-        background: $banner-image no-repeat center center;
+        background-image: $banner-image;
+        background-position: center center;
         background-size: cover;
 
         color: $banner-text-color;
@@ -254,6 +256,7 @@ footer {
 @media print {
     nav, .banner-buttons {
         display:none;
+        min-height: none;
     }
 
     .banner {
