@@ -188,16 +188,8 @@ header {
         margin: 0 0;
         text-align: center;
         background-color: $banner-bg-color;
-        background: $banner-image no-repeat;
-        height: 100%; 
-        width: 100%;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-position: 50% 50%; 
-        -webkit-background-size: cover; 
-        -moz-background-size: cover; 
+        background-image: $banner-image;
+        background-position: center center;
         background-size: cover;
 
         color: $banner-text-color;
