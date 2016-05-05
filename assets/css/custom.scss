@@ -1,15 +1,17 @@
 ---
 # this YAML frontmatter is necessary for jekyll to parse this file
 ---
+
 // -------------------------------------- //
 //          Color Definitions             //
 // -------------------------------------- //
 
 // Named according to name-that-color
-// Just add new colors to this list if needed
-// Change the used colors in the next block!
+// Define new colors here, then use them below
+// Don't change these defintions, 
+// instead change the variables in the next block!
 
-$Boulder: #777;
+$Boulder: #777777;
 $Alabaster: #f8f8f8;
 
 // -------------------------------------- //
