@@ -193,6 +193,7 @@ header {
         //background-image: $banner-image;
         background-position: center center;
         background-size: cover;
+        -webkit-background-size: cover;
 
         color: $banner-text-color;
 
