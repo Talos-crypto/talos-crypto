@@ -27,6 +27,7 @@ $menu-text-color: $Boulder;
 $menu-bg-color: $Alabaster;
 $menu-active-color: darken($Alabaster, 10%);
 
+$banner-bg-color: $Boulder; //Fallback for android
 $banner-text-color: $Alabaster;
 $banner-text-shadow-color: rgba(0,0,0,0.6);
 
@@ -186,6 +187,7 @@ header {
         //min-height: 40rem;
         margin: 0 0;
         text-align: center;
+        background-color: $banner-bg-color;
         background-image: $banner-image;
         background-position: center center;
         background-size: cover;
