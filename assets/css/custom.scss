@@ -194,6 +194,10 @@ header {
 
         color: $banner-text-color;
 
+        ul {
+            list-style-type: none;
+        }
+
         h1 {
             margin: 0;
             @include font-size(4.2rem);
