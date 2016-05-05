@@ -49,9 +49,39 @@ body,h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
 }
 
+h1 {
+    font-size: 3.6em;
+}
+
+h2 {
+    font-size: 3.0em;
+}
+
+h3 {
+    font-size: 2.4em;
+}
+
+h4 {
+    font-size: 2.1em;
+}
+
+h5 {
+    font-size: 1.8em;
+}
+
+h6 {
+    font-size: 1.6em;
+}
+
+p {
+    font-size: 1.6em;
+}
+
 a {
     text-decoration: none;
 }
+
+
 
 img {
     max-width: 100%;
@@ -99,12 +129,18 @@ header {
         color: $banner-text-color;
 
         h1 {
+            margin: 0;
             font-size: 4.2em;
             // We're using px here since the shadow is incredibly unimportant
             text-shadow: 2px 2px 3px $banner-text-shadow-color;
             @media (min-width: $media-cutoff) {
                 font-size: 7em;
             }
+        }
+
+        h3 {
+            // We're using px here since the shadow is incredibly unimportant
+            text-shadow: 2px 2px 3px $banner-text-shadow-color;
         }
 
         hr {
