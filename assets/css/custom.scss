@@ -22,6 +22,9 @@ $Alabaster: #f8f8f8;
 // 1em will usually mean 10px
 
 $banner-image: url({{ site.baseurl}}/assets/images/intro-bg.jpg);
+// We need this to fake "cover" without js:
+$banner-image-x: 10072px;
+$banner-iamge-y:4042px;
 
 $menu-text-color: $Boulder;
 $menu-bg-color: $Alabaster;
@@ -182,13 +185,12 @@ header {
     .banner {
         padding: 6em 0;
         width: 100%;
-        max-width: 100%;
-        min-height: 400px; //IE 8 fallback
-        //min-height: 40rem;
+        $height-cutoff: 400px;
+        min-height: $height-cutoff;
         margin: 0 0;
         text-align: center;
         background-color: $banner-bg-color;
-        background-image: $banner-image;
+        //background-image: $banner-image;
         background-position: center center;
         background-size: cover;
 
