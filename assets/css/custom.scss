@@ -1,9 +1,19 @@
 ---
 # this YAML frontmatter is necessary for jekyll to parse this file
 ---
+// -------------------------------------- //
+//          Color Definitions             //
+// -------------------------------------- //
+
+// Named according to name-that-color
+// Just add new colors to this list if needed
+// Change the used colors in the next block!
+
+$Boulder: #777;
+$Alabaster: #f8f8f8;
 
 // -------------------------------------- //
-//          Stlying Variables             //
+//          Styling Variables             //
 // -------------------------------------- //
 
 // Since we use the 62.5% font-size trick on body,
@@ -11,12 +21,15 @@
 
 $banner-image: url({{ site.baseurl}}/assets/images/intro-bg.jpg);
 
-$menu-text-color: #777;
-$banner-text-color: #f8f8f8;
-$banner-text-shadow-color: rgba(0,0,0,0.6);
-$footer-bg-color: #f8f8f8;
+$menu-text-color: $Boulder;
 
-$max-width: 75em;
+$banner-text-color: $Alabaster;
+$banner-text-shadow-color: rgba(0,0,0,0.6);
+
+$footer-bg-color: $Alabaster;
+$footer-text-color: $Boulder;
+
+$max-width: 100em;
 
 // Remeber that @media queries are at top-level, so here 1em=16px!
 $media-cutoff: 43.75em; //700px in default zoom
@@ -163,6 +176,12 @@ footer {
         padding: 5em 0;
         max-width: $max-width;
         margin: 0 auto;
+
+        p {
+            font-size: 1.2em;
+            font-weight:bold;
+            color: $footer-text-color;
+        }
     }
 }
 
