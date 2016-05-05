@@ -8,8 +8,8 @@
                     {% assign url_parts = node.url | split: '/' %}
                     {% assign depth = url_parts | size %}
                     {% if depth <= 2 %}
-                        {% if node.url == page.url %}
-                            <li><a class="navbar-link current-link" href='{{site.baseurl}}{{node.url}}' title="{{node.title}}">{{node.title}}</a></li>
+                        {% if page.url == node.url %}
+                            <li><a class="navbar-link current" href='{{site.baseurl}}{{node.url}}' title="{{node.title}}">{{node.title}}</a></li>
                         {% else %}
                             <li><a class="navbar-link" href='{{site.baseurl}}{{node.url}}' title="{{node.title}}">{{node.title}}</a></li>
                         {% endif %}

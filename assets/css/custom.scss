@@ -11,20 +11,21 @@
 // Don't change these defintions, 
 // instead change the variables in the next block!
 
-$Boulder: #777777;
+$Boulder: #777;
 $Alabaster: #f8f8f8;
 
 // -------------------------------------- //
 //          Styling Variables             //
 // -------------------------------------- //
 
-// Since we use the 62.5% font-size trick on body,
+// Since we use the 62.5% font-size trick on html,
 // 1em will usually mean 10px
 
 $banner-image: url({{ site.baseurl}}/assets/images/intro-bg.jpg);
 
 $menu-text-color: $Boulder;
 $menu-bg-color: $Alabaster;
+$menu-active-color: darken($Alabaster, 10%);
 
 $banner-text-color: $Alabaster;
 $banner-text-shadow-color: rgba(0,0,0,0.6);
@@ -32,11 +33,10 @@ $banner-text-shadow-color: rgba(0,0,0,0.6);
 $footer-bg-color: $Alabaster;
 $footer-text-color: $Boulder;
 
-$max-width: 115em;
+$max-width: 115rem;
 
-// Remeber that @media queries are at top-level, so here 1em=16px!
-$media-cutoff: 43.75em; //700px in default zoom
-
+// For some reason it seems like media queries don't respect the 10px rem
+$media-cutoff: (700/16) * 1rem; //700px in default zoom
 
 
 
@@ -44,10 +44,21 @@ $media-cutoff: 43.75em; //700px in default zoom
 //               defaults                 //
 // -------------------------------------- //
 
-body,
+@mixin font-size($sizeValue: 1.6rem) {
+    @if type-of($sizeValue) == "number" and unit($sizeValue) == "rem" {
+        font-size: ($sizeValue / 1rem) * 10px;
+        font-size: $sizeValue;
+    }@else if type-of($sizeValue) == "number" and unit($sizeValue) == "px" {
+        font-size: $sizeValue;
+        font-size: ($sizeValue / 10px) * 1rem;
+    }@else {
+        font-size: $sizeValue;
+    }
+}
+
 html {
-    width: 100%;
-    height: 100%;
+    /* rem now 10px by default, but still relative */
+    font-size: 62.5%;
     box-sizing: border-box;
 }
 
@@ -56,9 +67,12 @@ html {
 }
 
 body {
-    /* ems now 10px by default, but still relative */
-    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    // Do not use rem or mixin here because of Android 4.4 bug
+    font-size: 1.6em;
 }
+
 
 body,h1,h2,h3,h4,h5,h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -66,31 +80,31 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    font-size: 3.6em;
+    @include font-size(3.6rem);
 }
 
 h2 {
-    font-size: 3.0em;
+    @include font-size(3.0rem);
 }
 
 h3 {
-    font-size: 2.4em;
+    @include font-size(2.4rem);
 }
 
 h4 {
-    font-size: 2.1em;
+    @include font-size(2.1rem);
 }
 
 h5 {
-    font-size: 1.8em;
+    @include font-size(1.8rem);
 }
 
 h6 {
-    font-size: 1.6em;
+    @include font-size(1.6rem);
 }
 
 p {
-    font-size: 1.6em;
+    @include font-size(1.6rem);
 }
 
 a {
@@ -114,25 +128,38 @@ header {
     background-color: $menu-bg-color;
 
     .navbar {
-        margin: 0 auto;
         max-width: $max-width;
-        padding: 1.6em 1em;
 
         ul {
-            padding: 0;
-            margin: 0;
+            margin: 0 auto;
+            padding: 0 0;
         }
 
         li {
-            display: inline;
+            display: inline-block;
             list-style-type: none;
+            width: 100%;
         }
 
+
+
         a {
+            display: block;
+            @include font-size(1.8rem);
+            padding: 16px 10px; //IE8 fallback
+            padding: 1.6rem 1rem;
+            margin: 0 5px; //IE8 fallback
+            margin: 0 0.5rem;
             color: $menu-text-color;
             font-weight: bold;
-            font-size: 1.8em;
+            
         }
+
+        .current {
+                background-color: $menu-active-color;
+            }
+
+
     }
 
 
@@ -140,6 +167,8 @@ header {
     .banner {
         padding: 6em 0;
         max-width: 100%;
+        min-height: 400px; //IE 8 fallback
+        min-height: 40rem;
         margin: 0 0;
         text-align: center;
         background: $banner-image no-repeat center center;
@@ -149,11 +178,11 @@ header {
 
         h1 {
             margin: 0;
-            font-size: 4.2em;
+            @include font-size(4.2rem);
             // We're using px here since the shadow is incredibly unimportant
             text-shadow: 2px 2px 3px $banner-text-shadow-color;
             @media (min-width: $media-cutoff) {
-                font-size: 7em;
+                @include font-size(7rem);
             }
         }
 
@@ -179,12 +208,15 @@ footer {
     background-color: $footer-bg-color;
 
     .content {
-        padding: 5em 0;
+        padding: 1rem 0;
+        @media (min-width: $media-cutoff) {
+            padding: 5rem 0;
+        }
         max-width: $max-width;
         margin: 0 auto;
 
         p {
-            font-size: 1.2em;
+            @include font-size(1.2rem);
             font-weight:bold;
             color: $footer-text-color;
         }
