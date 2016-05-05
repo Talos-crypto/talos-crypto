@@ -3,22 +3,24 @@
             <!-- Navigation -->
             <nav class="navbar">
             {% assign sorted_pages = site.pages | sort:"nav_weight" %}
-            {% for node in sorted_pages %}
-                {% assign url_parts = node.url | split: '/' %}
-                {% assign depth = url_parts | size %}
-                {% if depth <= 2 %}
-                    {% if node.url == page.url %}
-                        <a class="navbar-link current-link" href='{{site.baseurl}}{{node.url}}' title="{{node.title}}">{{node.title}}</a>
-                    {% else %}
-                        <a class="navbar-link" href='{{site.baseurl}}{{node.url}}' title="{{node.title}}">{{node.title}}</a>
+                <ul>
+                {% for node in sorted_pages %}
+                    {% assign url_parts = node.url | split: '/' %}
+                    {% assign depth = url_parts | size %}
+                    {% if depth <= 2 %}
+                        {% if node.url == page.url %}
+                            <li><a class="navbar-link current-link" href='{{site.baseurl}}{{node.url}}' title="{{node.title}}">{{node.title}}</a></li>
+                        {% else %}
+                            <li><a class="navbar-link" href='{{site.baseurl}}{{node.url}}' title="{{node.title}}">{{node.title}}</a></li>
+                        {% endif %}
                     {% endif %}
-                {% endif %}
-            {% endfor %}
+                {% endfor %}
+                </ul>
             </nav>
 
             <!-- Top Banner -->
             <div class="banner">
-                <div class="banner-title"
+                <div class="banner-title">
                     <h1>{{ site.title }}</h1>
                     <h3>{{ site.subTitle }}</h3>
                 </div>            

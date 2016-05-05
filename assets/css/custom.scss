@@ -6,10 +6,20 @@
 //          Stlying Variables             //
 // -------------------------------------- //
 
+// Since we use the 62.5% font-size trick on body,
+// 1em will usually mean 10px
+
 $banner-image: url({{ site.baseurl}}/assets/images/intro-bg.jpg);
+
+$menu-text-color: #777;
+$banner-text-color: #f8f8f8;
+$banner-text-shadow-color: rgba(0,0,0,0.6);
 $footer-bg-color: #f8f8f8;
 
 $max-width: 75em;
+
+// Remeber that @media queries are at top-level, so here 1em=16px!
+$media-cutoff: 43.75em; //700px in default zoom
 
 
 
@@ -34,6 +44,11 @@ body {
     font-size: 62.5%;
 }
 
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
 a {
     text-decoration: none;
 }
@@ -52,8 +67,26 @@ header {
     .navbar {
         margin: 0 auto;
         max-width: $max-width;
-        padding: 1em 0.5em;
+        padding: 1.6em 1em;
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: inline;
+            list-style-type: none;
+        }
+
+        a {
+            color: $menu-text-color;
+            font-weight: bold;
+            font-size: 1.8em;
+        }
     }
+
+
 
     .banner {
         padding: 6em 0;
@@ -62,6 +95,21 @@ header {
         text-align: center;
         background: $banner-image no-repeat center center;
         background-size: cover;
+
+        color: $banner-text-color;
+
+        h1 {
+            font-size: 4.2em;
+            // We're using px here since the shadow is incredibly unimportant
+            text-shadow: 2px 2px 3px $banner-text-shadow-color;
+            @media (min-width: $media-cutoff) {
+                font-size: 7em;
+            }
+        }
+
+        hr {
+            max-width: 40em;
+        }
     }
 
 }
