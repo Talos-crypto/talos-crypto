@@ -13,18 +13,18 @@
 
 $Boulder: #777;
 $Alabaster: #f8f8f8;
+$BostonBlue: #428bca;
 
 // -------------------------------------- //
 //          Styling Variables             //
 // -------------------------------------- //
 
-// Since we use the 62.5% font-size trick on html,
-// 1em will usually mean 10px
+
 
 $banner-image: url({{ site.baseurl}}/assets/images/intro-bg.jpg);
-// We need this to fake "cover" without js:
-$banner-image-x: 10072px;
-$banner-iamge-y:4042px;
+
+$link-color: $BostonBlue;
+
 
 $menu-text-color: $Boulder;
 $menu-bg-color: $Alabaster;
@@ -38,10 +38,12 @@ $footer-bg-color: $Alabaster;
 $footer-text-color: $Boulder;
 
 
+// Since we use the 62.5% font-size trick on html,
+// 1em will usually mean 10px
 $max-width: 115rem;
 
 // For some reason it seems like media queries don't respect the 10px rem
-$media-cutoff: (700/16) * 1rem; //700px in default zoom
+$media-cutoff: (700/16) * 1rem; //700px in default settings
 
 
 
@@ -117,6 +119,7 @@ p {
 
 a {
     text-decoration: none;
+    color: $link-color;
 }
 
 //TODO: Add external link indicator. Ideally without Font Awesome?
@@ -253,11 +256,11 @@ footer {
 // -------------------------------------- //
 
 .home-item:nth-of-type(2n+1) {
-    background-color: #ccc
+    background-color: #eee
 }
 
 .home-item:nth-of-type(2n) {
-    background-color: #eee
+    background-color: #ccc
 }
 
 
