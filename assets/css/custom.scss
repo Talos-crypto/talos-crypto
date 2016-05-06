@@ -164,8 +164,8 @@ header {
             display: block;
             @include font-size(1.8rem);
             font-weight: bold;
-            padding: 12px 10px; //IE8 fallback
-            padding: 1.2rem 1rem;
+            padding: 10px 10px; //IE8 fallback
+            padding: 1rem 1rem;
             margin: 0 5px; //IE8 fallback
             margin: 0 0.5rem;
             color: $menu-text-color;
@@ -185,15 +185,13 @@ header {
     .banner {
         padding: 6em 0;
         width: 100%;
-        $height-cutoff: 400px;
-        min-height: $height-cutoff;
+        min-height: 400px;
         margin: 0 0;
         text-align: center;
         background-color: $banner-bg-color;
-        //background-image: $banner-image;
+        background-image: $banner-image;
         background-position: center center;
         background-size: cover;
-        -webkit-background-size: cover;
 
         color: $banner-text-color;
 

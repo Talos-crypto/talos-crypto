@@ -1,10 +1,12 @@
 ---
 layout: base
 ---
+{% if page.show_content %}
 <div class="content">
 <H1> HOME </h1>
 {{ content }}
 </div>
+{% endif %}
 
 {% for item in site.home-items %}
 <div class="home-item">
