@@ -22,7 +22,6 @@ $BostonBlue: #428bca;
 
 
 $banner-image: url({{ site.baseurl}}/assets/images/intro-bg.jpg);
-
 $link-color: $BostonBlue;
 
 
@@ -36,6 +35,8 @@ $banner-text-shadow-color: rgba(0,0,0,0.6);
 
 $footer-bg-color: $Alabaster;
 $footer-text-color: $Boulder;
+$footer-banner-text-color: $Alabaster;
+$footer-banner-image: url({{site.baseurl}}/assets/images/banner-bg.png);
 
 
 // Since we use the 62.5% font-size trick on html,
@@ -43,7 +44,7 @@ $footer-text-color: $Boulder;
 $max-width: 115rem;
 
 // For some reason it seems like media queries don't respect the 10px rem
-$media-cutoff: (700/16) * 1rem; //700px in default settings
+$media-cutoff: 700px; 
 
 
 
@@ -233,8 +234,17 @@ header {
 footer {    
     background-color: $footer-bg-color;
 
-    .content {
-        padding: 1rem 0;
+    .banner {
+        color: $footer-banner-text-color;
+        background-color: $banner-bg-color;
+        background-image: $footer-banner-image;
+        background-position: center center;
+        background-size: cover;
+        // We're using px here since the shadow is incredibly unimportant
+        text-shadow: 2px 2px 3px $banner-text-shadow-color;
+    }
+
+    .content {        
         @media (min-width: $media-cutoff) {
             padding: 5rem 0;
         }
