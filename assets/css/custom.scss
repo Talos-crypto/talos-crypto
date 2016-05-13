@@ -41,7 +41,7 @@ $footer-banner-image: url({{site.baseurl}}/assets/images/banner-bg.png);
 
 // Since we use the 62.5% font-size trick on html,
 // 1em will usually mean 10px
-$max-width: 115rem;
+$max-width: 1150px;
 
 // For some reason it seems like media queries don't respect the 10px rem
 $media-cutoff: 700px; 
@@ -111,11 +111,12 @@ h5 {
 }
 
 h6 {
-    @include font-size(1.6rem);
+    @include font-size(1.8rem);
 }
 
 p {
-    @include font-size(1.6rem);
+    @include font-size(1.8rem);
+    font-weight: 400;
 }
 
 a {
@@ -229,6 +230,10 @@ header {
     margin: 0 auto;
     max-width: $max-width;
     overflow: hidden;
+    padding: 12.5px;
+    @media (min-width: $media-cutoff) {
+    padding: 25px;
+    }
 }
 
 footer {    
@@ -242,6 +247,10 @@ footer {
         background-size: cover;
         // We're using px here since the shadow is incredibly unimportant
         text-shadow: 2px 2px 3px $banner-text-shadow-color;
+
+        h2 {
+            margin: 0 0 0 25px;
+        }
     }
 
     .content {        
@@ -264,6 +273,45 @@ footer {
 // -------------------------------------- //
 //                 Home                   //
 // -------------------------------------- //
+
+.flex-item {
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+
+
+    img {
+        display: block;
+    }
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+
+    @media ( min-width: $media-cutoff) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.home-item {
+    padding: 50px 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(231, 231, 231);
+    margin: 0 auto;
+
+    img {
+        margin: auto;
+    }
+}
 
 .home-item:nth-of-type(2n+1) {
     background-color: #eee

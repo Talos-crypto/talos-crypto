@@ -11,11 +11,15 @@ layout: base
 {% for item in site.home-items %}
 <div class="home-item">
     <div class="content">
-    	<h3>{{ item.title }}</h3>
-    	{{ item.content }}
-    	{% if item.image %}
-    	<img src="{{ site.baseurl }}{{ item.image }}">
-    	{% endif %}
+        <div class="flex-item">
+            <h2>{{ item.title }}</h2>
+            {{ item.content }}
+        </div>        
+        {% if item.image %}
+        <div class="flex-item">
+            <img src="{{ site.baseurl }}{{ item.image }}">
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endfor %}
