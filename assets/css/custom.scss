@@ -44,7 +44,7 @@ $footer-banner-image: url({{site.baseurl}}/assets/images/banner-bg.png);
 $max-width: 1150px;
 
 // For some reason it seems like media queries don't respect the 10px rem
-$media-cutoff: 700px; 
+$media-cutoff: 800px; 
 
 
 
@@ -275,6 +275,7 @@ footer {
 // -------------------------------------- //
 
 .flex-item {
+    margin: 0 15px;
 
     @media ( min-width: $media-cutoff ) {
         flex-grow: 1;
@@ -293,6 +294,7 @@ footer {
 .content {
     display: flex;
     flex-direction: column;
+    margin: 0 -15px;
 
     @media ( min-width: $media-cutoff) {
         flex-direction: row;
