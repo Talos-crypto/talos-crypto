@@ -303,7 +303,7 @@ footer {
 }
 
 .home-item {
-    padding: 50px 0;
+    margin: 50px 0;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgb(231, 231, 231);
@@ -315,11 +315,11 @@ footer {
 }
 
 .home-item:nth-of-type(2n+1) {
-    background-color: #eee
-}
+    background-color: $Alabaster;
 
+}
 .home-item:nth-of-type(2n) {
-    background-color: #ccc
+    background-color: #fffff;
 }
 
 
