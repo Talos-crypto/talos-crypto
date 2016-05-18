@@ -6,12 +6,18 @@ layout: base
 <H1> TEAM </H1>
 {{ content }}
 </div>
+<div class="content">
+    <div class="flexbox-container-team">
+        {% for member in site.team-members %}
+        <div class="team-member">            
+            <h3><img src="http://i.imgur.com/PoiP5gl.png" height="50" width="50"><a class="team-member-link" href="{{site.baseurl}}{{member.url}}">{{ member.title }}</a></h3>
+            <img src="http://i.imgur.com/PoiP5gl.png" height="25" width="50"><a class="team-member-link" href="{{site.baseurl}}{{member.url}}"></a>
+            <img src="http://i.imgur.com/PoiP5gl.png" height="25" width="50"><a class="team-member-link" href="{{site.baseurl}}{{member.url}}"></a>
+            <img src="http://i.imgur.com/PoiP5gl.png" height="25" width="50"><a class="team-member-link" href="{{site.baseurl}}{{member.url}}"></a>
 
-{% for member in site.team-members %}
-<div class="team-member">
-    <div class="content">
-        <h3><a class="team-member-link" href="{{site.baseurl}}{{member.url}}">{{ member.title }}</a></h3>
-        {{ member.content }}
+            {{ member.content }}
+        </div>
+        {% endfor %}
     </div>
 </div>
-{% endfor %}
+

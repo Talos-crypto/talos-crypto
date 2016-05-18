@@ -323,6 +323,36 @@ footer {
 }
 
 
+////////// TEAM
+
+.flexbox-container-team {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media ( min-width: $media-cutoff) {
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+.team-member {
+    width: 50%;
+
+    vertical-align: middle;
+    img {
+        margin: 0 15px 0 0;
+        vertical-align:middle
+    }
+
+    h3 {
+        margin: 15px auto;
+    }
+
+
+}
+
+
 // -------------------------------------- //
 //                Print                   //
 // -------------------------------------- //
