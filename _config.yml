@@ -56,5 +56,8 @@ safe: true #mimick Github settings
 gems:
   - jekyll-sitemap
 
+sass: 
+  sass_dir: /assets/css/imports/
+
 # Build settings
 markdown: kramdown
