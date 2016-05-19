@@ -9,11 +9,28 @@ layout: base
 <div class="content">
     <div class="flexbox-container-team">
         {% for member in site.team-members %}
-        <div class="team-member">            
-            <h3><img src="http://i.imgur.com/PoiP5gl.png" height="50" width="50"><a class="team-member-link" href="{{site.baseurl}}{{member.url}}">{{ member.title }}</a></h3>
-            <img src="http://i.imgur.com/PoiP5gl.png" height="25" width="50"><a class="team-member-link" href="{{site.baseurl}}{{member.url}}"></a>
-            <img src="http://i.imgur.com/PoiP5gl.png" height="25" width="50"><a class="team-member-link" href="{{site.baseurl}}{{member.url}}"></a>
-            <img src="http://i.imgur.com/PoiP5gl.png" height="25" width="50"><a class="team-member-link" href="{{site.baseurl}}{{member.url}}"></a>
+        <div class="team-member">
+            {% if member.image %}
+             <h3><img src="{{ site.baseurl }}{{ member.image }}">
+                <a class="team-member-link" href="{{site.baseurl}}{{member.url}}">{{ member.title }}
+            </a></h3>
+            {% else %}
+             <h3><img src="{{ site.baseurl }}/assets/images/default_avatar.png">
+                <a class="team-member-link" href="{{site.baseurl}}{{member.url}}">{{ member.title }}
+            </a></h3>
+            {% endif %}
+
+            {% if member.github %}
+            <span class="btn btn-github"><a href="{{ member.github }}"><i class="fa fa-github" aria-hidden="true"></i> Github</a></span>
+            {% endif %}
+
+            {% if member.linkedin %}
+            <span class="btn btn-linkedin"><a href="{{ member.linkedin }}"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></span>
+            {% endif %}
+
+            {% if member.twitter %}
+            <span class="btn font awesomebtn-twitter"><a href="{{ member.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></span>
+            {% endif %}
 
             {{ member.content }}
         </div>

@@ -326,27 +326,53 @@ footer {
 ////////// TEAM
 
 .flexbox-container-team {
-    display: flex;
+       display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
 
     @media ( min-width: $media-cutoff) {
         flex-direction: row;
-        align-items: stretch;
     }
 }
 
 .team-member {
-    width: 50%;
 
-    vertical-align: middle;
+
+    @media ( min-width: $media-cutoff) {
+        width: 50%;
+        margin: 0 0;
+    }
+
+    
     img {
         margin: 0 15px 0 0;
-        vertical-align:middle
+        vertical-align:middle;
+        width: 50px;
+        height: 50px;
     }
 
     h3 {
         margin: 15px 0;
+    }
+
+    .btn {
+        vertical-align: middle;
+        color: #ccc;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        vertical-align: middle;
+        text-align: justify;
+
+        a {
+            color: $Boulder;
+            font-weight: 400;
+            @include font-size(1.4rem);
+            text-decoration: none;
+        }
     }
 
 
