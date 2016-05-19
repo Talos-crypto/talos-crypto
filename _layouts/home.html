@@ -12,12 +12,12 @@ layout: base
 <div class="home-item">
     <div class="content">
         <div class="flexbox">
-            <div class="flex-item">
+            <div class="flex-item text">
                 <h2>{{ item.title }}</h2>
                 {{ item.content }}
             </div>        
             {% if item.image %}
-            <div class="flex-item">
+            <div class="flex-item img">
                 <img src="{{ site.baseurl }}{{ item.image }}">
             </div>
             {% endif %}

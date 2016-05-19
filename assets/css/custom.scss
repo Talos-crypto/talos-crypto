@@ -358,9 +358,28 @@ footer {
 .home-item:nth-of-type(2n+1) {
     background-color: $Alabaster;
 
+    @media (min-width: $media-cutoff) {
+        .text {
+            order: 1;
+        }
+        .img {
+            order : 2;
+        }
+    }
+
 }
 .home-item:nth-of-type(2n) {
     background-color: #fffff;
+
+    @media (min-width: $media-cutoff) {
+        .img {
+            order: 1;
+        }
+
+        .text {
+            order: 2;
+        }
+    }
 }
 
 
