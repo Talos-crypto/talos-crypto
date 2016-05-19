@@ -5,4 +5,4 @@ github: 'https://github.com/AlexanderViand/'
 twitter: 'https://twitter.com/AlexanderViand'
 ---
 
-alexander_viand.md content
+Alexander is a Computer Science student at ETH Zürich with an interest in privacy and security in the IoT. 

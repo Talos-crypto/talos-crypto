@@ -232,7 +232,7 @@ header {
     overflow: hidden;
     padding: 12.5px;
     @media (min-width: $media-cutoff) {
-    padding: 25px;
+    padding: 0 25px;
     }
 }
 
