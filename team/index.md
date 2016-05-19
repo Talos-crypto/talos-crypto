@@ -8,4 +8,4 @@ nav_weight: 1
 layout: team
 ---
 
-TEAM INDEX.MD CONTENT
+Talos is developed by the Distributed Systems Group at ETH Zürich.
