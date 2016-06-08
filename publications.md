@@ -1,9 +1,9 @@
 ---
 # used by navigation
-title: Test-page
+title: Publications
 
 # used by the layout:
 layout: default
 ---
 
-TEST PAGE CONTENT
+Publication page content
