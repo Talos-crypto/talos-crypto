@@ -404,13 +404,20 @@ footer {
         width: 50%;
         margin: 0 0;
     }
-
+    .team-member-link {
+        line-height: 30px;
+        @include font-size(2.2rem);
+    }
     
     img {
         margin: 0 15px 0 0;
         vertical-align:middle;
         width: 50px;
         height: 50px;
+        float: left;
+    }
+    p {
+        clear: left;
     }
 
     h3 {

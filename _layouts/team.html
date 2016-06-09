@@ -11,15 +11,11 @@ layout: base
         {% for member in site.team-members %}
         <div class="team-member">
             {% if member.image %}
-             <h3><img src="{{ site.baseurl }}{{ member.image }}">
-                <a class="team-member-link" href="{{site.baseurl}}{{member.url}}">{{ member.title }}
-            </a></h3>
+             <img src="{{ site.baseurl }}{{ member.image }}">
             {% else %}
-             <h3><img src="{{ site.baseurl }}/assets/images/default_avatar.png">
-                <a class="team-member-link" href="{{site.baseurl}}{{member.url}}">{{ member.title }}
-            </a></h3>
+             <img src="{{ site.baseurl }}/assets/images/default_avatar.png">
             {% endif %}
-
+            <a class="team-member-link" href="{{site.baseurl}}{{member.url}}">{{ member.title }}</a></br>
             {% if member.github %}
             <span class="btn btn-github"><a href="{{ member.github }}"><i class="fa fa-github" aria-hidden="true"></i> Github</a></span>
             {% endif %}
