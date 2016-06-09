@@ -1,8 +1,8 @@
 ---
 layout: default
-image: /assets/images/gateway.png
-title: The Smartphone as a Gateway
+image: /assets/images/user-power.png
+title: Power over my data
 description: |
 ---
 
-Many consumer-oriented devices and applications use smartphones as a gateway to both the user and to the cloud. The phone provides both the interaction with the user as well as the network connectivity.
+With Talos, the user regains control over their data, such that no unauthoroized entities can see the plaintext data. The user can decide with whom to share their data.
