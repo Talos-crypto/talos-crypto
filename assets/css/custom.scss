@@ -386,7 +386,7 @@ footer {
 ////////// TEAM
 
 .flexbox-container-team {
-       display: flex;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
@@ -399,10 +399,9 @@ footer {
 
 .team-member {
 
-
     @media ( min-width: $media-cutoff) {
-        width: 50%;
-        margin: 0 0;
+        width: 45%;
+        margin: 25px 25px;
     }
     .team-member-link {
         line-height: 30px;
