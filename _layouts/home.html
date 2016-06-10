@@ -1,0 +1,27 @@
+---
+layout: base
+---
+{% if page.show_content %}
+<div class="content">
+<H1> HOME </h1>
+{{ content }}
+</div>
+{% endif %}
+
+{% for item in site.home-items %}
+<div class="home-item">
+    <div class="content">
+        <div class="flexbox">
+            <div class="flex-item text">
+                <h2>{{ item.title }}</h2>
+                {{ item.content }}
+            </div>        
+            {% if item.image %}
+            <div class="flex-item img">
+                <img src="{{ site.baseurl }}{{ item.image }}">
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}

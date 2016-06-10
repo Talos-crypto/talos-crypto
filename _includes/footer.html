@@ -1,13 +1,16 @@
 <!-- Footer -->
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">               
-                <p class="copyright text-muted small">{{ site.copyright }}</p>
-            </div>
-            <div class="col-md-4">
-                <p class="copyright text-muted small">{{ site.credits }}</p>
+    <div class="banner">
+        <div class="content">
+            <div class="footer-contact-flexbox">
+                <h2>{{ site.contact }}</h2>
+                <span class="btn btn-github afas"><a href="https://github.com/talos-crypto/"><i class="fa fa-github" aria-hidden="true"></i> Talos for Android</a></span>
+                <span class="btn btn-github"><a href="https://github.com/talos-crypto/"><i class="fa fa-github" aria-hidden="true"></i> Talos for Contiki</a></span>
             </div>
         </div>
+    </div>
+    <div class="content">
+        <p class="copyright">{{ site.copyright }}</p>
+        <p class="credits">{{ site.credits }}</p>
     </div>
 </footer>

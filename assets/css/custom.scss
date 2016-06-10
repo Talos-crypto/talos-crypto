@@ -1,0 +1,465 @@
+---
+# this YAML frontmatter is necessary for jekyll to parse this file
+---
+
+// -------------------------------------- //
+//          Color Definitions             //
+// -------------------------------------- //
+
+// Named according to name-that-color
+// Define new colors here, then use them below
+// Don't change these defintions, 
+// instead change the variables in the next block!
+
+$Boulder: #777;
+$Alabaster: #f8f8f8;
+$BostonBlue: #428bca;
+
+// -------------------------------------- //
+//          Styling Variables             //
+// -------------------------------------- //
+
+
+
+$banner-image: url({{ site.baseurl}}/assets/images/intro-bg.jpg);
+$link-color: $BostonBlue;
+
+
+$menu-text-color: $Boulder;
+$menu-bg-color: $Alabaster;
+$menu-active-color: darken($Alabaster, 10%);
+
+$banner-bg-color: $Boulder; //Fallback for android
+$banner-text-color: $Alabaster;
+$banner-text-shadow-color: rgba(0,0,0,0.6);
+
+$footer-bg-color: $Alabaster;
+$footer-text-color: $Boulder;
+$footer-banner-text-color: $Alabaster;
+$footer-banner-image: url({{site.baseurl}}/assets/images/banner-bg.png);
+
+
+// Since we use the 62.5% font-size trick on html,
+// 1em will usually mean 10px
+$max-width: 1150px;
+
+// For some reason it seems like media queries don't respect the 10px rem
+$media-cutoff: 800px; 
+
+
+
+// -------------------------------------- //
+//               defaults                 //
+// -------------------------------------- //
+
+@mixin font-size($sizeValue: 1.6rem) {
+    @if type-of($sizeValue) == "number" and unit($sizeValue) == "rem" {
+        font-size: ($sizeValue / 1rem) * 10px;
+        font-size: $sizeValue;
+    }@else if type-of($sizeValue) == "number" and unit($sizeValue) == "px" {
+        font-size: $sizeValue;
+        font-size: ($sizeValue / 10px) * 1rem;
+    }@else {
+        font-size: $sizeValue;
+    }
+}
+
+html {
+    /* rem now 10px by default, but still relative */
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height:100%;
+    min-height:100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height:100%;
+    // Do not use rem or mixin here because of Android 4.4 bug
+    font-size: 1.6em;
+}
+
+
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    @include font-size(3.6rem);
+}
+
+h2 {
+    @include font-size(3.0rem);
+}
+
+h3 {
+    @include font-size(2.4rem);
+}
+
+h4 {
+    @include font-size(2.1rem);
+}
+
+h5 {
+    @include font-size(1.8rem);
+}
+
+h6 {
+    @include font-size(1.8rem);
+}
+
+p {
+    @include font-size(1.8rem);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: $link-color;
+}
+
+//TODO: Add external link indicator. Ideally without Font Awesome?
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// -------------------------------------- //
+//         Header/.Content/Footer         //
+// -------------------------------------- //
+
+header {
+    
+    background-color: $menu-bg-color;
+
+    .navbar {
+        max-width: $max-width;
+        margin: 0 auto;
+
+        ul {
+            margin: 0 auto;
+            padding: 0 0;
+            text-align: center;
+        }
+        @media (min-width: $media-cutoff) {
+            ul {
+                text-align: right;
+            }
+            li:first-child{
+                float:left
+            }
+        }
+
+        li {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+
+
+        a {
+            display: block;
+            @include font-size(1.8rem);
+            font-weight: bold;
+            padding: 10px 10px; //IE8 fallback
+            padding: 1rem 1rem;
+            margin: 0 5px; //IE8 fallback
+            margin: 0 0.5rem;
+            color: $menu-text-color;
+            
+            
+        }
+
+        .current {
+                background-color: $menu-active-color;
+            }
+
+
+    }
+
+
+
+    .banner {
+        padding: 6em 0;
+        width: 100%;
+        min-height: 400px;
+        margin: 0 0;
+        text-align: center;
+        background-color: $banner-bg-color;
+        background-image: $banner-image;
+        background-position: center center;
+        background-size: cover;
+
+        color: $banner-text-color;
+
+        ul {
+            list-style-type: none;
+        }
+
+        h1 {
+            margin: 0;
+            @include font-size(4.2rem);
+            // We're using px here since the shadow is incredibly unimportant
+            text-shadow: 2px 2px 3px $banner-text-shadow-color;
+            @media (min-width: $media-cutoff) {
+                @include font-size(7rem);
+            }
+        }
+
+        h3 {
+            // We're using px here since the shadow is incredibly unimportant
+            text-shadow: 2px 2px 3px $banner-text-shadow-color;
+        }
+
+        hr {
+            max-width: 40em;
+        }
+    }
+
+}
+
+.content {
+    margin: 0 auto;
+    max-width: $max-width;
+    overflow: hidden;
+    padding: 12.5px;
+    @media (min-width: $media-cutoff) {
+    padding: 0 25px;
+    }
+}
+
+footer {    
+    background-color: $footer-bg-color;
+
+    .banner {
+        color: $footer-banner-text-color;
+        background-color: $banner-bg-color;
+        background-image: $footer-banner-image;
+        background-position: center center;
+        background-size: cover;
+        // We're using px here since the shadow is incredibly unimportant
+        text-shadow: 2px 2px 3px $banner-text-shadow-color;
+
+        h2 {
+            margin: 0 0 0 25px;
+        }
+    }
+
+    .content {        
+        @media (min-width: $media-cutoff) {
+            padding: 5rem 0;
+        }
+        max-width: $max-width;
+        margin: 0 auto;
+
+        p {
+            @include font-size(1.2rem);
+            font-weight:bold;
+            color: $footer-text-color;
+        }
+    }
+
+    .footer-contact-flexbox {
+        display: flex;
+        vertical-align: middle;
+        justify-content: space-between;
+
+         .afas {
+                margin-left: auto;
+            }
+
+        .btn {
+
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #fff;
+            text-shadow: 0 0 #fff;
+            vertical-align: middle;
+            color: #ccc;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            
+            text-align: justify;
+
+           
+
+
+            a {
+                vertical-align: middle;
+                display: inline-block;
+                color: #000;
+                font-weight: normal;
+                @include font-size(1.6rem);
+                text-decoration: none;
+                letter-spacing: 2px;
+                line-height: 1.33;
+            }
+        }
+    }
+}
+
+
+
+// -------------------------------------- //
+//                 Home                   //
+// -------------------------------------- //
+
+.flex-item {
+    margin: 0 15px;
+
+    @media ( min-width: $media-cutoff ) {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        height: 100%;
+    }
+
+
+    img {
+        display: block;
+    }
+
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -15px;
+
+    @media ( min-width: $media-cutoff) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.home-item {
+    margin: 50px 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(231, 231, 231);
+    margin: 0 auto;
+
+    img {
+        margin: 15px auto;
+    }
+}
+
+.home-item:nth-of-type(2n+1) {
+    background-color: $Alabaster;
+
+    @media (min-width: $media-cutoff) {
+        .text {
+            order: 1;
+        }
+        .img {
+            order : 2;
+        }
+    }
+
+}
+.home-item:nth-of-type(2n) {
+    background-color: #fffff;
+
+    @media (min-width: $media-cutoff) {
+        .img {
+            order: 1;
+        }
+
+        .text {
+            order: 2;
+        }
+    }
+}
+
+
+////////// TEAM
+
+.flexbox-container-team {
+       display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+
+    @media ( min-width: $media-cutoff) {
+        flex-direction: row;
+    }
+}
+
+.team-member {
+
+
+    @media ( min-width: $media-cutoff) {
+        width: 50%;
+        margin: 0 0;
+    }
+    .team-member-link {
+        line-height: 30px;
+        @include font-size(2.2rem);
+    }
+    
+    img {
+        margin: 0 15px 0 0;
+        vertical-align:middle;
+        width: 50px;
+        height: 50px;
+        float: left;
+    }
+    p {
+        clear: left;
+    }
+
+    h3 {
+        margin: 15px 0;
+    }
+}
+
+.btn {
+        background-color: #fff;
+        vertical-align: middle;
+        color: #ccc;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        vertical-align: middle;
+        text-align: justify;
+
+        a {
+            color: $Boulder;
+            font-weight: 400;
+            @include font-size(1.4rem);
+            text-decoration: none;
+        }
+    }
+
+
+// -------------------------------------- //
+//                Print                   //
+// -------------------------------------- //
+@media print {
+    nav, .banner-buttons {
+        display:none;
+        min-height: none;
+    }
+
+    .banner {
+        padding: 0;
+        background: none;
+    }
+
+    footer {
+        padding: 0 0;
+    }
+}
