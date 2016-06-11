@@ -39,7 +39,7 @@ defaults:
         path: ""
         type: "team-members"
     values:
-        layout: "default"
+        layout: "team-members"
         position: 999 #sort to back by default
 
 

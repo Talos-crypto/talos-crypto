@@ -1,0 +1,34 @@
+---
+layout: base
+---
+<div class="content">
+        <div class="team-member">
+            {% assign member = page %}
+            {% if member.image %}
+             <img src="{{ site.baseurl }}{{ member.image }}">
+            {% else %}
+             <img src="{{ site.baseurl }}/assets/images/default_avatar.png">
+            {% endif %}
+            
+            {% if member.web %}
+            <a class="team-member-link" href="{{member.web}}">{{ member.title }}</a></br>
+            {% else %}
+            <a class="team-member-link" href="{{site.baseurl}}{{member.url}}">{{ member.title }}</a></br>
+            {% endif %}
+            
+            {% if member.github %}
+            <span class="btn btn-github"><a href="{{ member.github }}"><i class="fa fa-github" aria-hidden="true"></i></a></span>
+            {% endif %}
+
+            {% if member.linkedin %}
+            <span class="btn btn-linkedin"><a href="{{ member.linkedin }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></span>
+            {% endif %}
+
+            {% if member.twitter %}
+            <span class="btn font awesomebtn-twitter"><a href="{{ member.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+            {% endif %}
+            
+            {{ member.content }}
+        </div>
+</div>
+
