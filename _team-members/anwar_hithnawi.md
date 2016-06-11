@@ -1,5 +1,6 @@
 ---
 title: Anwar Hithnawi
+position: 1
 image: /assets/images/anwar_avatar.png
 web: 'https://people.inf.ethz.ch/hanwar/'
 github: 'https://github.com/Anwarhit/'

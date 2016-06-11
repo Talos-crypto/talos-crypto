@@ -37,9 +37,10 @@ defaults:
   - 
     scope:
         path: ""
-        type: "team"
+        type: "team-members"
     values:
         layout: "default"
+        position: 999 #sort to back by default
 
 
 collections:

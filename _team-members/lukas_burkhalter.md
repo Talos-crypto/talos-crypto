@@ -1,5 +1,6 @@
 ---
 title: Lukas Burkhalter
+position: 2
 image: /assets/images/lukas_avatar.jpg
 github: 'https://github.com/lubux/'
 ---
