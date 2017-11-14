@@ -7,4 +7,4 @@ twitter: 'https://twitter.com/anwarhit/'
 linkedin: 'https://www.linkedin.com/in/anwarhit/'
 ---
 
-Anwar Hithnawi is a Ph.D. candidate and research assistant at the Distributed Systems Group at ETH Zurich.
+Anwar Hithnawi is a researcher at the NetSys Lab at UC Berkeley, USA.
