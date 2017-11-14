@@ -6,4 +6,4 @@ github: 'https://github.com/lubux/'
 linkedin: 'https://ch.linkedin.com/in/lukas-burkhalter-015ab3133'
 ---
 
-Lukas Burkhalter is a Computer Science student at ETH Zürich, currently pursuing his master's degree.
+Lukas Burkhalter is a Ph.D. candidate and research assistant at the Distributed Systems Group at ETH Zurich.
